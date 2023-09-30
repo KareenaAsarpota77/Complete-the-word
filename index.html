@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete the word</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/words.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="game-el">
+        <div class="content">
+            <img src="#" alt="gif">
+            <h4>Game Over!</h4>
+            <p>The correct word was: <b></b></p>
+            <button class="play-again">Play Again</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="hangman-el">
+            <h1>Complete the word</h1>
+            <img src="#"  draggable="false" alt="game-img"  width="200" height="300">
+            <h4 id="prompts-el"></h4>
+            <!-- <img class="student" src="studentss.jpg" >
+            <img class="school" src="school.jpg"> -->
+        </div>
+        <!-- <div id="root">
+            <div class="hangstand">
+              <div class="class-1"></div>
+              <div class="class-2"></div>
+            </div> -->
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">Helpful Hint: <b></b></h4>
+            <div class="keyboard"></div>
+            <h4 class="guesses-text">Wrong guesses: <b></b></h4>
+         <h4 id="prompts-el"></h4>
+        </div>
+    </div>
+</body>
+</html>

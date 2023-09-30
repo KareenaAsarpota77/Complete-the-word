@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #dc829e;
+    font-family: ariel;
+}
+.container {
+    display: flex;
+    width: 850px;
+    gap: 50px;
+    padding: 60px 40px;
+    background: #fff;
+    border-radius: 10px;
+    align-items: flex-end;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* .class-1 {
+  height: 60px;
+  width: 1.5px;
+  top: 403px;
+  left: 302px;
+  background: black;
+  position: absolute;
+  transform: rotate(90deg);
+}
+  .class-2 {
+    height: 1.5px;
+    width: 125px;
+    top: 370px;
+    background: black;
+    position: absolute;
+    left: 210px;
+    transform: rotate(90deg);
+  } */
+
+  .hangman-box img {
+    user-select: none;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+}
+/* .hangman-el img.student{
+    user-select: none;
+    max-width: 80px;
+    margin-bottom: 40px;
+    margin-right: 40px; 
+}
+.hangman-el img.school{
+    user-select: none;
+    max-width: 80px;
+    margin-top: 40px;
+    margin-left: 90px;
+} */
+.hangman-el h1 {
+    font-size: 1.45rem;
+    text-align: center;
+    color: #151b69;
+    margin-bottom:5px;
+    text-transform: uppercase;
+}
+.game-box .word-display {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.game-box .prompts-el {
+    font-size: 1.45rem;
+    text-align: center;
+    color: #151b69;
+    margin-bottom:5px;
+    text-transform: uppercase;
+}
+.word-display .letter {
+    width: 28px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+}
+.word-display .letter.guessed {
+    margin: -40px 0 35px;
+    border-color: transparent;
+}
+.game-box h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #151b69;
+}
+.game-box .guesses-text {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin:15px;
+    color: #151b69;
+}
+.game-box h4 b {
+    font-weight: 600;
+}
+.game-box .guesses-text b {
+    color: #ff0000;
+}
+.game-box .keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    justify-content: center;
+   
+}
+:where(.game-modal, .keyboard) button {
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background:  #b51648;
+}
+.keyboard button {
+    padding: 10px;
+    width: 40;
+}
+.keyboard button[disabled] {
+    pointer-events: none;
+    opacity: 0.6;
+}
+:where(.game-modal, .keyboard) button:hover {
+    background: #8286c9;
+}
+.game-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 0 10px;
+    transition: opacity 0.4s ease;
+}
+.game-el.show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s 0.4s ease;
+}
+.game-el .content {
+    padding: 30px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.game-el img {
+    max-width: 130px;
+    margin-bottom: 20px;
+}
+.game-el img[src="images/ghi.gif"] {
+    margin-left: -10px;
+}
+.game-el h4 {
+    font-size: 1.53rem;
+}
+.game-el p {
+    font-size: 1.15rem;
+    margin: 15px 0 30px;
+    font-weight: 500;
+}
+.game-el p b {
+    color: #5E63BA;
+    font-weight: 600;
+}
+.game-el button {
+    padding: 12px 23px;
+}
+
+@media (max-width: 782px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .hangman-box img {
+        max-width: 200px;
+    }
+    .hangman-box h1 {
+        display: none;
+    }
+    .game-box h4 {
+        font-size: 1rem;
+    }
+    .word-display .letter {
+        margin-bottom: 35px;
+        font-size: 1.7rem;
+    }
+    .word-display .letter.guessed {
+        margin: -35px 0 25px;
+    }
+    .game-el img {
+        max-width: 120px;
+    }
+    .game-el h4 {
+        font-size: 1.45rem;
+    }
+    .game-el p {
+        font-size: 1.1rem;
+    }
+    .game-el button {
+        padding: 10px 18px;
+    }
+}
